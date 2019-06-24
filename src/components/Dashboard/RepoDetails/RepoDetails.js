@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const RepoDetails = props => {
   const { repo } = props.location.repo;
+  console.log("repo: ", repo);
   return (
     <div className="container pt-5">
       <div className="py-4">
