@@ -1,5 +1,11 @@
 .detailAvatar {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+}
+
+.repoDesName {
+  color: #0056b3;
+  font-weight: 600;
+  font-size: 14px;
 }

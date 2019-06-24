@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Route path="/" exact component={Dashboard} />
-        <Route path="/details" component={RepoDetails} />
+        <Route path="/details/:id?" component={RepoDetails} />
       </div>
     </BrowserRouter>
   );

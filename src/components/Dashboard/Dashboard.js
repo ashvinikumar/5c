@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Dashboard.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
   state = {
@@ -32,20 +33,28 @@ class Dashboard extends Component {
       <div className="container">
         <div className="jumbotron">
           <div className="row">
-            {this.state.repos.map((repo) => (
+            {this.state.repos.map(repo => (
               <div className="col-md-6 col-sm-12 repo py-3" key={repo.id}>
                 <div className="row">
                   <div className="col-2">
-                    <img className="repoImg" src={repo.owner.avatar_url} alt="avatar"/>
+                    <img
+                      className="repoImg"
+                      src={repo.owner.avatar_url}
+                      alt="avatar"
+                    />
                   </div>
                   <div className="col-10">
                     <div className="text-left">
-                      <p className="repoName mb-0">{repo.name}</p>
+                      <Link
+                        to={{ pathname: `/details/${repo.id}`, repo: { repo } }}
+                      >
+                        {repo.name}
+                      </Link>
                       <p className="repoDescription">{repo.description}</p>
                     </div>
                   </div>
                 </div>
-            </div>
+              </div>
             ))}
           </div>
         </div>
