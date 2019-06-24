@@ -1,0 +1,10 @@
+.repoImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.repoName {
+  font-weight: 600;
+  color: #0366d6;
+}
