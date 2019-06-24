@@ -1,12 +1,16 @@
 import React from "react";
 import "./RepoDetails.css";
+import { NavLink } from "react-router-dom";
 
 const RepoDetails = props => {
-  console.log("repo data from props: ", props.location.repo);
   const { repo } = props.location.repo;
-  console.log("repo: ", repo);
   return (
     <div className="container pt-5">
+      <div className="py-4">
+        <NavLink to="/">
+          <span className="mx-3 cursorPointer">Back to all Repos</span>
+        </NavLink>
+      </div>
       <div className="row">
         <div className="col-md-4 col-sm-12">
           <div className="">
